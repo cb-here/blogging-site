@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{ 
+    background-color: bisque;
+    width: 1280px;
+    margin: 0 auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+    text-decoration: none;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 10vh;
+    border-bottom: 1px solid black;
+    margin-bottom: 30px;
+}
+
+header nav .logo {
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: rgb(41, 19, 19);
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+header nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 5px;
+    border-radius: 50px;
+    background-color: blueviolet;
+    position: absolute;
+    top: 110%;
+    transition: 0.5s all ease;
+    left: 0%;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+.container {
+    background-color: rgb(239, 199, 160);
+    padding: 30px;
+    border-radius: 5px;
+    min-height: 80vh;
+    margin-bottom: 30px;
+}
+.container .write-blog{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom:20px ;
+}
+
+.writer {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+.writer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+.writer:hover {
+    color: #e8e8e8;
+   }
+.writer:hover::before {
+    width: 100%;
+   }
+
+footer {
+    background-color: black;
+    padding: 4rem 0;
+    color: #fff;
+}
+footer .container {
+    color: black;
+}
+footer .box {
+    flex: 1;
+    text-align: center;
+    margin-right: 2rem;
+}
+footer .box ul{
+    list-style: none;
+}
+footer .box ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;;
+}
+footer .box ul li a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+footer .box h3 {
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+footer .box p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+footer .box ul li {
+    margin-bottom: 10px;
+}
+
+.copyright {
+    padding: 1rem 0;
+    background-color: var(--secondary);
+    color: var(--pure);
+    text-align: center;
+    font-size: 0.75rem;
+}
+.copyright a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.container .read-blog ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom:20px; 
+    list-style-type: none;
+}
+
+.blog-table-container {
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 1000px;
+    overflow-x: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+  }
+  
+
+  .blog-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .blog-table thead {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .blog-table thead th {
+    padding: 10px;
+  }
+  
+  .blog-table tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .blog-table tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .blog-table tbody td {
+    padding: 10px;
+  }
+  
+  .btn {
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-right: 5px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .view-btn {
+    background-color: #3498db;
+  }
+  
+  .edit-btn {
+    background-color: #f1c40f;
+  }
+  
+  .delete-btn {
+    background-color: #e74c3c;
+  }
+
+  .back-btn {
+    background-color: #0e0909;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+
+.blog-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #dedada;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Blog post header styles */
+  .blog-header {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+  }
+  
+  .blog-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .blog-meta {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  /* Blog content styles */
+  .blog-content {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  
+  .blog-content blockquote {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #f9f9f9;
+    border-left: 4px solid #333;
+    font-style: italic;
+    color: #666;
+  }
+  
+  .blog-footer {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  /* Form container styling */
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .form-container h1 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Form field styling */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  textarea {
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+  
+  /* Submit button styling */
+  .btn.submit-btn {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .btn.submit-btn:hover {
+    background-color: #2980b9;
+  }
+  
